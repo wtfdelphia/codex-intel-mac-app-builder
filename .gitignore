@@ -1,0 +1,16 @@
+.tmp/
+dist/
+logs/
+Codex.dmg
+.DS_Store
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Editor / OS noise
+.vscode/
+.idea/
+*.swp
+*.swo
