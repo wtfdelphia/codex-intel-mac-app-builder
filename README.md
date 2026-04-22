@@ -64,6 +64,21 @@ chmod +x scripts/*.sh *.command
 ./scripts/open-app.sh
 ```
 
+### 网络问题解决方案
+
+如果构建过程中遇到 Electron 下载超时（`ETIMEDOUT` 或 `socket hang up`），请设置镜像源：
+
+```sh
+# 使用淘宝镜像（推荐中国大陆用户）
+ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/ \
+npm_config_electron_mirror=https://npmmirror.com/mirrors/electron/ \
+./scripts/build.sh /absolute/path/to/Codex.dmg
+```
+
+其他镜像源：
+- 官方镜像（默认）：`https://electronjs.org/`
+- 阿里云镜像：`https://npm.taobao.org/mirrors/electron/`
+
 ## 更新流程
 
 当新的官方 Codex 应用程序发布时：
